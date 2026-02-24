@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36930.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymScheduler.Domain", "GymScheduler.Domain\GymScheduler.Domain.csproj", "{3A02D6BF-17CD-4B36-AF47-CB941EFD862A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymScheduler.Domain", "GymScheduler.Domain\GymScheduler.Domain\GymScheduler.Domain.csproj", "{3A02D6BF-17CD-4B36-AF47-CB941EFD862A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymScheduler.Infrastructure", "..\GymScheduler.Infrastructure\GymScheduler.Infrastructure\GymScheduler.Infrastructure.csproj", "{40F91C91-9C1E-4573-B2CD-5980CFDC05D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymScheduler.Infrastructure", "GymScheduler.Infrastructure\GymScheduler.Infrastructure\GymScheduler.Infrastructure.csproj", "{40F91C91-9C1E-4573-B2CD-5980CFDC05D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymScheduler.Application", "..\GymScheduler.Application\GymScheduler.Application.csproj", "{C04B1318-EAA8-44AD-BDF2-CE7815C8212E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymScheduler.Application", "GymScheduler.Application\GymScheduler.Application.csproj", "{C04B1318-EAA8-44AD-BDF2-CE7815C8212E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
