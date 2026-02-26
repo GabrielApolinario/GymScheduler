@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GymScheduler.Domain.Entities
 {
-    public sealed class SetRepScheme(Exercise exercise, int sets, int reps)
+    public sealed class SetRepScheme(Exercise exercise, int sets, int reps) : BaseEntity
     {
         public Guid Id { get; } = Guid.NewGuid();
         public Exercise Exercise { get; } = exercise;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GymScheduler.Domain.Entities
 {
-    public sealed class Exercise(string name, string description, string targetMuscle)
+    public sealed class Exercise(string name, string description, string targetMuscle) : BaseEntity
     {
         public Guid Id { get; } = Guid.NewGuid();
         public string? Name { get; set; } = name;
