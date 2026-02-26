@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GymScheduler.Domain.Interfaces
 {
-    public interface IExerciseRepository
+    public interface IExerciseRepository : IBaseRepository<Exercise>
     {
         Task AddAsync(Exercise exercise);
         Task UpdateAsync(Exercise exercise);
