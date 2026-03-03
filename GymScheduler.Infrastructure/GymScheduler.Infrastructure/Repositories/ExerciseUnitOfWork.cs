@@ -9,5 +9,9 @@ namespace GymScheduler.Infrastructure.Repositories
 {
     public class ExerciseUnitOfWork : IUnitOfWork
     {
+        public Task Commit(CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

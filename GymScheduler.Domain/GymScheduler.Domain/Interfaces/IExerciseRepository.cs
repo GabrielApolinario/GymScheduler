@@ -9,10 +9,5 @@ namespace GymScheduler.Domain.Interfaces
 {
     public interface IExerciseRepository : IBaseRepository<Exercise>
     {
-        Task AddAsync(Exercise exercise);
-        Task UpdateAsync(Exercise exercise);
-        Task DeleteAsync(Exercise exercise);
-        Task<Exercise> GetByIdAsync(int id);
-        Task<Exercise> GetAllAsync();
     }
 }

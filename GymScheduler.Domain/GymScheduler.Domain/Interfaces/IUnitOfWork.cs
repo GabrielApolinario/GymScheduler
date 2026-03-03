@@ -8,5 +8,6 @@ namespace GymScheduler.Domain.Interfaces
 {
     public interface IUnitOfWork
     {
+        Task Commit (CancellationToken cancellationToken);
     }
 }
