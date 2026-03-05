@@ -17,8 +17,10 @@ namespace GymScheduler.Infrastructure
         public static void ConfigureInfrastructureApp(this IServiceCollection services, IConfiguration configuration)
         {
             var connectionString = configuration.GetConnectionString("AppContext");
-
             services.AddDbContext<ExerciseContext>(d => d.UseSqlite(connectionString));
+
+            var postgresConn = configuration.GetConnectionString("Postgres");
+            services.AddDbContext<ExerciseContext>(d => d.UseNpgsql(postgresConn));
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IExerciseRepository, ExerciseRepository>();
