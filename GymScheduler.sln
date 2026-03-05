@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymScheduler.Infrastructure
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymScheduler.Application", "GymScheduler.Application\GymScheduler.Application.csproj", "{C04B1318-EAA8-44AD-BDF2-CE7815C8212E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymScheduler.Presentation", "GymScheduler.Presentation\GymScheduler.Presentation.csproj", "{AE3BEBEC-0EA0-47B0-8748-39C79350F260}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymScheduler.API", "GymScheduler.Presentation\GymScheduler.API.csproj", "{AE3BEBEC-0EA0-47B0-8748-39C79350F260}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
