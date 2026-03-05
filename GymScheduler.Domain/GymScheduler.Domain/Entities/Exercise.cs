@@ -11,6 +11,7 @@ namespace GymScheduler.Domain.Entities
         public string? Name { get; set; } = name;
         public string? Description { get; set; } = description;
         public string? TargetMuscle { get; set; } = targetMuscle;
+        public string? ExecutionVideoUrl { get; set; }
         public DateTime CreatedAt { get; } = DateTime.Now;
     }
 }
