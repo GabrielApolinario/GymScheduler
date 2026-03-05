@@ -11,7 +11,7 @@ namespace GymScheduler.Infrastructure.Contexts
 {
     public class ExerciseContext : DbContext
     {
-        public ExerciseContext(DbContextOptions<DbContext> options) : base(options)
+        public ExerciseContext(DbContextOptions<ExerciseContext> options) : base(options)
         {
         }
         public DbSet<Exercise> Exercises { get; set; }
