@@ -1,5 +1,6 @@
 ﻿using GymScheduler.Domain.Entities;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace GymScheduler.Domain.Interfaces
         public void Update(T entity);
         public void Delete(T entity);
         public Task<T> GetById(Guid id, CancellationToken cancellationToken);
-        public Task<T> GetAll(CancellationToken cancellationToken);
+        public Task<IEnumerable<T>> GetAll(CancellationToken cancellationToken);
 
     }
 }
