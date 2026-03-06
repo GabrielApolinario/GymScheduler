@@ -25,7 +25,14 @@ builder.Services.AddRateLimiter(options =>
     });
 });
 
-Env.Load();
+if (File.Exists("/etc/secrets/.env"))
+{
+    Env.Load("/etc/secrets/.env");
+}
+else
+{
+    Env.Load();
+}
 
 var app = builder.Build();
 
