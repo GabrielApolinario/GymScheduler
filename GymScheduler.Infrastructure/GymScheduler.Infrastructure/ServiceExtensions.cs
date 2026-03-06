@@ -22,8 +22,8 @@ namespace GymScheduler.Infrastructure
             var postgresConn = configuration.GetConnectionString("Postgres");
             services.AddDbContext<ExerciseContext>(d => d.UseNpgsql(postgresConn));
 
-            //services.AddScoped<IUnitOfWork, UnitOfWork>();
-            //services.AddScoped<IExerciseRepository, ExerciseRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IExerciseRepository, ExerciseRepository>();
         }
     }
 }
