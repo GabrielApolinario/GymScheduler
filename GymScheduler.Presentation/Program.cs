@@ -25,20 +25,6 @@ builder.Services.AddRateLimiter(options =>
     });
 });
 
-var path = "/etc/secrets";
-
-if (Directory.Exists(path))
-{
-    foreach (var file in Directory.GetFiles(path))
-    {
-        Console.WriteLine($"Secret file encontrado: {file}");
-    }
-}
-else
-{
-    Console.WriteLine("/etc/secrets não existe");
-}
-
 if (File.Exists("/etc/secrets/.env"))
 {
     Env.Load("/etc/secrets/.env");
@@ -47,8 +33,6 @@ else
 {
     Env.Load();
 }
-
-Console.WriteLine(builder.Configuration["ApiPwd"]);
 
 var app = builder.Build();
 
