@@ -23,6 +23,6 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore "./GymScheduler.Presentation/GymScheduler.API.csproj"
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build "./GymScheduler.Presentation/GymScheduler.API.csproj" --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test "./GymScheduler.Presentation/GymScheduler.API.csproj" --no-build --verbosity normal
