@@ -22,10 +22,9 @@ namespace GymScheduler.API.Controllers
         [HttpPost]
         public async Task<ActionResult<CreateExerciseResponse>> Create(string pwd, CreateExerciseRequest request, CancellationToken cancellationToken)
         {
-            //Proposito de teste
-            if(pwd != _configuration["ApiPwd"])
+            //testes only, to be removed in the future when auth will be implemented
+            if (pwd != _configuration["ApiPwd"])
             {
-                _logger.LogWarning($"Unauthorized access attempt to create exercise with password: {pwd} || {_configuration["ApiPwd"]}");
                 return Unauthorized();
             }
 
