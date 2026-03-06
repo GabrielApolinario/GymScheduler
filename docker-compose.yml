@@ -1,0 +1,6 @@
+services:
+  gymscheduler.api:
+    image: ${DOCKER_REGISTRY-}gymschedulerapi
+    build:
+      context: .
+      dockerfile: GymScheduler.Presentation/Dockerfile
