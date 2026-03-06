@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GymScheduler.Application\GymScheduler.Application.csproj" />
     <ProjectReference Include="..\GymScheduler.Infrastructure\GymScheduler.Infrastructure\GymScheduler.Infrastructure.csproj" />
   </ItemGroup>
 
