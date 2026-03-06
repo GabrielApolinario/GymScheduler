@@ -1,17 +1,17 @@
 using GymScheduler.Infrastructure;
 using Microsoft.AspNetCore.RateLimiting;
 using System.Threading.RateLimiting;
+using GymScheduler.Application.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.ConfigureInfrastructureApp(builder.Configuration);
+builder.Services.ConfigureApplicationApp();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-ServiceExtensions.ConfigureInfrastructureApp(builder.Services, builder.Configuration);
 
 builder.Services.AddRateLimiter(options =>
 {
