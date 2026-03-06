@@ -10,11 +10,13 @@ namespace GymScheduler.API.Controllers
     {
         private readonly IMediator _mediator;
         private readonly IConfiguration _configuration;
+        private readonly ILogger<ExerciseController> _logger;
 
-        public ExerciseController(IMediator mediator, IConfiguration configuration)
+        public ExerciseController(IMediator mediator, IConfiguration configuration, ILogger<ExerciseController> logger)
         {
             _mediator = mediator;
             _configuration = configuration;
+            _logger = logger;
         }
 
         [HttpPost]
@@ -23,6 +25,7 @@ namespace GymScheduler.API.Controllers
             //Proposito de teste
             if(pwd != _configuration["ApiPwd"])
             {
+                _logger.LogWarning($"Unauthorized access attempt to create exercise with password: {pwd} || {_configuration["ApiPwd"]}");
                 return Unauthorized();
             }
 
