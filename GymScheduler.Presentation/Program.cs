@@ -48,6 +48,8 @@ else
     Env.Load();
 }
 
+Console.WriteLine(builder.Configuration["ApiPwd"]);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
