@@ -2,6 +2,7 @@ using GymScheduler.Infrastructure;
 using Microsoft.AspNetCore.RateLimiting;
 using System.Threading.RateLimiting;
 using GymScheduler.Application.Services;
+using DotNetEnv;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +25,7 @@ builder.Services.AddRateLimiter(options =>
     });
 });
 
+Env.Load();
 
 var app = builder.Build();
 
