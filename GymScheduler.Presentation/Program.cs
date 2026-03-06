@@ -38,7 +38,7 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.MapControllers();
+app.MapControllers().RequireRateLimiting("fixed");
 
 app.UseRateLimiter();
 
